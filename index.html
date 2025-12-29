@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitality | Health Science Dashboard</title>
+    <meta name="description" content="A premium health science dashboard to track your BMI and hydration.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="glass-panel">
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>VITALITY</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#science">Science</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Unlock Your <span class="gradient-text">Health Potential</span></h1>
+                <p>Advanced metrics and scientific insights for a better you. Monitor your vitals with precision tools
+                    designed for modern living.</p>
+                <a href="#tools" class="cta-button">Analyze Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-visual">
+                <i class="fa-solid fa-dna floating-icon"></i>
+            </div>
+        </section>
+
+        <section id="tools">
+            <div class="section-header">
+                <h2>Health Calculators</h2>
+                <p>Scientifically accurate tools for your body metrics.</p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- BMI Calculator -->
+                <article class="tool-card glass-panel" id="bmi-card">
+                    <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>BMI Calculator</h3>
+                    <p>Calculate your Body Mass Index to understand your weight category.</p>
+
+                    <div class="input-group">
+                        <label>Height (cm)</label>
+                        <input type="number" id="height" placeholder="175">
+                    </div>
+                    <div class="input-group">
+                        <label>Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="70">
+                    </div>
+                    <button onclick="calculateBMI()" class="action-btn">Calculate BMI</button>
+
+                    <div id="bmi-result" class="result-display hidden">
+                        <span class="value">--</span>
+                        <span class="category">Normal</span>
+                    </div>
+                </article>
+
+                <!-- Water Intake -->
+                <article class="tool-card glass-panel" id="water-card">
+                    <div class="card-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>Hydration Tracker</h3>
+                    <p>Estimate your daily recommended water intake based on activity.</p>
+
+                    <div class="input-group">
+                        <label>Weight (kg)</label>
+                        <input type="number" id="water-weight" placeholder="70">
+                    </div>
+                    <div class="input-group">
+                        <label>Daily Activity</label>
+                        <select id="activity-level">
+                            <option value="low">Sedentary</option>
+                            <option value="medium">Moderate</option>
+                            <option value="high">Active</option>
+                        </select>
+                    </div>
+                    <button onclick="calculateWater()" class="action-btn">Get Intake</button>
+
+                    <div id="water-result" class="result-display hidden">
+                        <span class="value">--</span>
+                        <span class="unit">Liters/day</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="science">
+            <div class="section-header">
+                <h2>The Science Corner</h2>
+                <p>Latest insights in health and physiology.</p>
+            </div>
+            <div class="science-grid">
+                <div class="info-card glass-panel">
+                    <h3><i class="fa-solid fa-moon"></i> Circadian Rhythms</h3>
+                    <p>Your body's internal clock regulates sleep, hormone release, and metabolism. Consistent sleep
+                        schedules optimize these processes.</p>
+                </div>
+                <div class="info-card glass-panel">
+                    <h3><i class="fa-solid fa-brain"></i> Neuroplasticity</h3>
+                    <p>The brain's ability to reorganize itself by forming new neural connections throughout life,
+                        allowing for learning and adaptation.</p>
+                </div>
+                <div class="info-card glass-panel">
+                    <h3><i class="fa-solid fa-carrot"></i> Micronutrients</h3>
+                    <p>Vitamins and minerals are essential for immune function, energy production, and blood clotting,
+                        despite being needed in small amounts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-panel">
+        <p>&copy; 2025 Vitality Science. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
